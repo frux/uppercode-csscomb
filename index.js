@@ -1,8 +1,14 @@
 module.exports = {
     'pre-commit': function(next){
-        var stagedFiles = this.stagedFilesSync('ACM');
+        var stagedFiles = this.stagedFilesSync('ACM'),
+            cssTest = /\.css$/;
 
-        console.log(stagedFiles);
+        stagedFiles.forEach((function(file){
+            if(cssTest.test(file)){
+                console.log('CSSComb: ' + file);
+                this.execSync('csscomb ' + file);
+            }
+        }).bind(this));
 
         next();
     }
