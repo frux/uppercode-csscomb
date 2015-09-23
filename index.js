@@ -1,7 +1,7 @@
 module.exports = {
     'pre-commit': function(next){
         var stagedFiles = this.stagedFilesSync('ACM'),
-            csscomb = __dirname  + '.githooks/node_modules//csscomb/bin/csscomb',
+            csscomb = __dirname  + '/.githooks/node_modules//csscomb/bin/csscomb',
             cssTest = /\.css$/;
 
         stagedFiles.forEach((function(file){
