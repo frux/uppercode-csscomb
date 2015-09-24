@@ -9,7 +9,7 @@
   "author": "Vladimir Kudinov <qdinov@yandex.ru>",
   "license": "WTFPL",
   "dependencies": {
-    "generator-uppercode": "^0.0.2",
+    "generator-uppercode": "^0",
     "csscomb": "^3.1.8"
   }
 }
